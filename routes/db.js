@@ -11,7 +11,7 @@ const pool = new Pool({
 
 
 /* GET home page. */
-router.get('/', async (req, res) => {
+router.get('/db', async (req, res) => {
   try {
     const client = await pool.connect();
     const result = await client.query('SELECT * FROM books');
